@@ -1,0 +1,11 @@
+%h3 Post a comment
+= simple_form_for [@article, @comment] do |f|
+  %ul.form-group
+    - @article.errors.full_messages.each do |error|
+      %li= error
+  .form-group
+    = f.input :author_name, label: "Your Name:", input_html: {class: 'form-control'}
+  .form-group
+    = f.input :body, as: :text, label: "Your Comment", input_html: {class: 'form-control'}
+  .form-group
+    = f.button :submit, class: 'btn-primary'
