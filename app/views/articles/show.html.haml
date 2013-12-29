@@ -3,6 +3,10 @@
     %h3.panel-title= @article.title
   .panel-body
     %p= @article.body
+    %p
+      Tags:
+      - @article.tags.each do |tag|
+        = link_to tag.name, tag_path(tag)
 %h3 Comments #{@article.comments.size}
 .list-group
   = render partial: 'articles/comment', collection: @article.comments
