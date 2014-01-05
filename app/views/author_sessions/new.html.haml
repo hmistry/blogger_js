@@ -1,0 +1,13 @@
+%h1 Login
+
+= simple_form_for [author_sessions_path, @author], url: author_sessions_path, method: :post do |f|
+  = f.error_notification
+
+  .form-group
+    = f.input :email, input_html: {class: "form-control"}
+  .form-group
+    = f.input :password, as: :password, input_html: {class: "form-control"}
+  .form-group
+    = f.button :submit, 'Login', class: 'btn-primary'
+
+%p= link_to 'Back to Articles', articles_path

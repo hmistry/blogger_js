@@ -56,6 +56,9 @@ gem 'erb2haml', group: :development
 # Other helper
 gem 'simple_form'
 
+gem 'paperclip'
+gem 'sorcery'
+
 # User authentication w/ roles
 # gem 'devise'
 # gem 'cancan'
